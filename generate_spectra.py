@@ -36,7 +36,7 @@ def generate_peaked_spectra(length=1024, height=200, background_level=20, peak_l
 	image[int(height / 2.0), int(peak_wavelength)] = peak_level
 	image[int(height / 2.0), int(peak_wavelength*2)] = peak_level
 	if peak_dist is not 0:
-		image[int(height / 2.0), int(peak_wavelength*2+peak_dist*2.7)] = peak_level
+		image[int(height / 2.0), int(peak_wavelength*2+peak_dist*2.7*2)] = peak_level
 
 	image[int(height / 2.0), int(peak_wavelength)*3] = peak_level
 	image[int(height / 2.0), int(peak_wavelength)*4] = peak_level

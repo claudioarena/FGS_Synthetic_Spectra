@@ -6,3 +6,5 @@
 /Spectra_image_sum.fit
 /__pycache__/
 /petitRADTRANS-master/
+*.png
+*.pgf

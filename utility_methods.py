@@ -75,11 +75,15 @@ def unpickle_movements():
 	y_PID_Off = pickle.load(f)
 	f.close()
 
-	x_PID_On = np.mean(x_PID_On[0:35200].reshape(-1, 400), axis=1)
-	y_PID_On = np.mean(y_PID_On[0:35200].reshape(-1, 400), axis=1)
-	x_PID_Off = np.mean(x_PID_Off[0:59600].reshape(-1, 400), axis=1)
-	y_PID_Off = np.mean(y_PID_Off[0:59600].reshape(-1, 400), axis=1)
+	#x_PID_On = np.mean(x_PID_On[0:35200].reshape(-1, 400), axis=1)
+	#y_PID_On = np.mean(y_PID_On[0:35200].reshape(-1, 400), axis=1)
+	#x_PID_Off = np.mean(x_PID_Off[0:59600].reshape(-1, 400), axis=1)
+	#y_PID_Off = np.mean(y_PID_Off[0:59600].reshape(-1, 400), axis=1)
 
+	x_PID_On = x_PID_On[::400]
+	y_PID_On = y_PID_On[::400]
+	x_PID_Off = x_PID_Off[::400]
+	y_PID_Off = y_PID_Off[::400]
 	return x_PID_On, y_PID_On, x_PID_Off, y_PID_Off
 
 
